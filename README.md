@@ -113,5 +113,42 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 - An empty group listing does not establish that a user has no access to resources.
 
 **Security note:** The exercise used read-only inspection. No users, groups, memberships, or permissions were changed.
+### Lab 06 — Troubleshoot a Microsoft Entra ID Sign-in Failure
+
+**Status:** Completed
+
+**Objective:** Investigate a failed user sign-in by reviewing account status, sign-in logs, authentication details, and Conditional Access results.
+
+**Steps performed:**
+1. Checked the account status and confirmed the account was enabled.
+2. Opened the failed sign-in event in Microsoft Entra ID sign-in logs.
+3. Reviewed Authentication Details and identified that MFA was required but not completed.
+4. Reviewed the Conditional Access tab and confirmed that the relevant policy showed Success.
+5. Checked the error code and failure reason, which referenced MFA, an authentication challenge, or a timeout.
+6. Identified the event timestamp, Correlation ID, and Request ID as useful troubleshooting references.
+7. Reviewed nearby sign-in events and found a successful sign-in event.
+
+**Findings:**
+- The investigated sign-in failed because the required authentication process was not completed.
+- The available details indicated an incomplete or timed-out MFA challenge.
+- A Conditional Access policy showing Success did not mean the entire sign-in had succeeded.
+- A nearby successful sign-in was observed, but the relationship between the two events was not established.
+
+**L1 troubleshooting approach:**
+- Verify the account status and review the sign-in error details.
+- Check the MFA result and relevant Conditional Access evaluation.
+- Ask the user what they experienced during the MFA prompt.
+- Guide the user through the approved MFA process or escalate according to organizational procedures.
+- Provide the event timestamp and correlation details to the administrator if further investigation is required.
+- Do not disable MFA or weaken Conditional Access as a troubleshooting shortcut.
+
+**Skills practised:**
+- Microsoft Entra ID sign-in log analysis
+- MFA troubleshooting fundamentals
+- Conditional Access interpretation
+- Incident evidence collection
+- L1 troubleshooting and escalation
+
+**Important note:** This lab documents read-only investigation. No account, authentication method, or security policy settings were changed.
 
 
