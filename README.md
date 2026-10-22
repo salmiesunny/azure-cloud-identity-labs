@@ -88,5 +88,30 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 **Security note:** No application settings, role assignments, or permissions were changed during these checks.
 
 **Next step:** Practise user and group management concepts in a safe lab environment and continue learning how Microsoft Entra ID supports identity and access management.
+### Lab 05 — Microsoft Entra ID Users and Groups
+
+- **Status:** Completed
+- **Objective:** Explore user account details and group membership in Microsoft Entra ID.
+
+**Tasks performed:**
+- Opened the Users directory and viewed the list of users.
+- Opened a user's Overview page.
+- Identified the User Principal Name (UPN) and User type fields.
+- Inspected the selected user's group membership.
+- Opened the Groups directory.
+
+**Observations:**
+- The Users directory displayed user entries.
+- The inspected user's Overview page showed the UPN and User type fields.
+- The selected user's group membership list appeared empty.
+- The Groups directory list also appeared empty.
+
+**Key learning:**
+- The UPN identifies a user's sign-in identity.
+- User type helps distinguish account categories such as Member and Guest.
+- Groups can help administrators manage access centrally when the relevant permissions are configured.
+- An empty group listing does not establish that a user has no access to resources.
+
+**Security note:** The exercise used read-only inspection. No users, groups, memberships, or permissions were changed.
 
 
