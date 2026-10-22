@@ -69,24 +69,24 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 ### Lab 04 — Microsoft Entra Enterprise Applications
 
 - **Status:** In Progress
-- **Objective:** Inspect the Enterprise Applications page using read-only checks.
-- **Tasks performed:**
-  - Opened Microsoft Entra ID → Enterprise applications.
-  - Checked the visible filters.
-  - Selected the All applications view.
-- **Observations:**
-  - The application list appeared empty.
-  - No active filters were visible.
-  - The reason for the empty list has not yet been established.
-- **Next step:** Continue read-only checks to investigate the result. No application settings or access assignments have been changed.
+- **Objective:** Inspect Microsoft Entra Enterprise Applications and practise read-only identity troubleshooting.
 
-### Skills Practised
+**Tasks performed:**
+- Opened Microsoft Entra ID → Enterprise applications.
+- Selected the All applications view.
+- Checked for visible active filters.
+- Refreshed the page to check whether the results would load.
 
-- Azure portal navigation
-- Microsoft Entra ID fundamentals
-- Azure role-based access control (RBAC) concepts
-- Resource-group inventory
-- Cost-awareness fundamentals
-- Technical documentation and troubleshooting
+**Observations:**
+- The application list appeared empty.
+- No active filters were visible.
+- Refreshing the page did not change the result.
+- The signed-in account appeared in the Global Administrator role assignments.
+
+**Conclusion:** The reason for the empty application list has not been established. The observation alone does not prove that the tenant has no applications or that a permissions issue exists. Further investigation would be needed.
+
+**Security note:** No application settings, role assignments, or permissions were changed during these checks.
+
+**Next step:** Practise user and group management concepts in a safe lab environment and continue learning how Microsoft Entra ID supports identity and access management.
 
 
