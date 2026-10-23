@@ -113,6 +113,7 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 - An empty group listing does not establish that a user has no access to resources.
 
 **Security note:** The exercise used read-only inspection. No users, groups, memberships, or permissions were changed.
+
 ### Lab 06 — Troubleshoot a Microsoft Entra ID Sign-in Failure
 
 **Status:** Completed
@@ -150,5 +151,32 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 - L1 troubleshooting and escalation
 
 **Important note:** This lab documents read-only investigation. No account, authentication method, or security policy settings were changed.
+
+## Lab 07: Azure RBAC and Role Assignments (Read-Only)
+
+### Objective
+Understand Azure Role-Based Access Control (RBAC), built-in roles, assignment scope, and the principle of least privilege.
+
+### Activities Performed
+- Opened Azure subscription 1 and navigated to Access control (IAM).
+- Inspected the role assignments in read-only mode.
+- Observed an Owner role assignment associated with my account.
+- Inspected the assignment details, where the scope was displayed as "This resource".
+- Practised choosing appropriate roles for common IT support scenarios.
+
+### Key Learnings
+- **Reader:** Provides read-only access within the assigned scope.
+- **Contributor:** Can manage resources within the assigned scope but generally cannot grant access to other users.
+- **Owner:** Can manage resources and grant access within the assigned scope.
+- **Least privilege:** Access should be limited to what a user needs to perform their duties.
+- **Scope:** Determines the resources to which an assignment applies. The exact scope of the observed Owner assignment was not independently verified during this exercise.
+
+### Operational and Security Notes
+- Used read-only inspection; no role assignments or permissions were changed.
+- Verified that the role assignment displayed my account as the principal and Owner as the role.
+- Recognised the importance of checking scope before concluding how broadly a permission applies.
+
+### Outcome
+Improved my understanding of Azure RBAC, built-in role differences, assignment scope, and least-privilege access decisions.
 
 
