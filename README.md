@@ -26,7 +26,7 @@ The labs are planned around skills commonly requested in IT Support, IT Infrastr
 | 01 | Azure Portal and Entra ID Exploration | Completed |
 | 02 | Azure Access and Resource Management | Completed |
 | 03 | Resource Inventory and Cost Awareness | Completed |
-| 04 | Microsoft Entra Enterprise Applications | In Progress |
+| 04 | Microsoft Entra Enterprise Applications | Completed |
 | 05 | Microsoft Entra ID Users and Groups | Completed |
 | 06 | Troubleshoot a Microsoft Entra ID Sign-in Failure | Completed |
 | 07 | Azure RBAC and Role Assignments (Read-Only) | Completed |
@@ -91,26 +91,38 @@ Status is updated only when a lab has actually been performed and documented.
 
 ### Lab 04 — Microsoft Entra Enterprise Applications
 
-- **Status:** In Progress
+- **Status:** Completed
 - **Objective:** Inspect Microsoft Entra Enterprise Applications and practise read-only identity troubleshooting.
 
-**Tasks performed:**
-- Opened Microsoft Entra ID → Enterprise applications.
-- Selected the All applications view.
-- Checked for visible active filters.
-- Refreshed the page to check whether the results would load.
-
-**Observations:**
-- The application list appeared empty.
-- No active filters were visible.
+**Initial observation:**
+- The All applications list appeared empty with no active filters visible.
 - Refreshing the page did not change the result.
 - The signed-in account appeared in the Global Administrator role assignments.
 
-**Conclusion:** The reason for the empty application list has not been established. The observation alone does not prove that the tenant has no applications or that a permissions issue exists. Further investigation would be needed.
+**Troubleshooting performed (read-only):**
+1. **Filter check:** The view used the filter *Application type == Microsoft Applications* and showed 33 applications. With no filter, the count was also 33. Setting the filter to *Application type == Enterprise Applications* returned an empty list.
+2. **App registrations:** The All applications list was empty.
+3. **Role check:** Global Administrator was listed as an Active, Direct assignment.
+4. **Health page:** Opening the Entra Health page returned error 401, "Insufficient privileges to complete the operation."
+5. **Audit logs:** The page loaded and returned "No results" for the 30-day date range selected.
+6. **Deleted applications:** The list was empty.
+7. **Licences:** No Microsoft Entra ID licence was listed under Licenses.
 
-**Security note:** No application settings, role assignments, or permissions were changed during these checks.
+**Findings:**
+- The list loads and shows 33 Microsoft applications, so the page itself was working.
+- The Enterprise Applications view returned no results, and there were no app registrations or deleted applications. This is consistent with the tenant containing only Microsoft's built-in applications and no non-Microsoft enterprise applications.
+- The audit log showed no results for the 30-day period checked, so it provided no evidence of application changes in that period. It cannot show what happened outside that window.
+- The 401 error on the Health page was not explained. The account held an active Global Administrator role, so holding that role did not guarantee access to every page. The cause (for example a licence requirement) was not verified.
+- The most likely explanation for the original empty list is that the default view found no non-Microsoft enterprise applications. This is an inference from the observations, not a confirmed cause.
 
-**Next step:** Practise user and group management concepts in a safe lab environment and continue learning how Microsoft Entra ID supports identity and access management.
+**Key learning:**
+- The Enterprise applications page applies filters, and an empty default view does not prove that no applications exist.
+- Comparing Enterprise applications, App registrations, role assignments, audit logs and licences is a structured way to narrow down an empty list.
+- An administrator role does not guarantee access to every portal page.
+- Audit log results depend on the date range selected and on what the tenant retains.
+- Findings should be recorded as observed, without stating a cause that was not verified.
+
+**Security note:** Read-only inspection. Only the on-screen filter and date range were changed. No applications, role assignments, licences, or permissions were changed.
 
 ### Lab 05 — Microsoft Entra ID Users and Groups
 
@@ -220,5 +232,3 @@ Status is updated only when a lab has actually been performed and documented.
 **Key learning:** _To be completed after the lab._
 
 **Security note:** _To be completed after the lab. Lab tenant only; no production settings changed._
-
-
