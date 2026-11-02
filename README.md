@@ -1,8 +1,6 @@
-# azure-cloud-identity-labs
-Hands-on Azure, Microsoft Entra ID, cloud infrastructure, and security labs documenting practical learning, configurations, troubleshooting, and project outcomes.
-
-
 # Azure Cloud & Identity Labs
+
+Hands-on Azure, Microsoft Entra ID, cloud infrastructure, and security labs documenting practical learning, configurations, troubleshooting, and project outcomes.
 
 ## About This Project
 
@@ -16,7 +14,32 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 - Understand Microsoft Entra ID and identity management
 - Learn role-based access control (RBAC)
 - Practise cloud networking and security fundamentals
+- Build practical Microsoft 365, Windows Server and endpoint-management skills used in UAE IT Support and Infrastructure roles
 - Document lab procedures, observations, and troubleshooting
+
+## Lab Roadmap
+
+The labs are planned around skills commonly requested in IT Support, IT Infrastructure and Network Operations roles in the UAE.
+
+| Lab | Topic | Status |
+|---|---|---|
+| 01 | Azure Portal and Entra ID Exploration | Completed |
+| 02 | Azure Access and Resource Management | Completed |
+| 03 | Resource Inventory and Cost Awareness | Completed |
+| 04 | Microsoft Entra Enterprise Applications | In Progress |
+| 05 | Microsoft Entra ID Users and Groups | Completed |
+| 06 | Troubleshoot a Microsoft Entra ID Sign-in Failure | Completed |
+| 07 | Azure RBAC and Role Assignments (Read-Only) | Completed |
+| 08 | Microsoft 365 Admin Basics (users, licences, groups, shared mailbox) | Planned |
+| 09 | Windows Server: Active Directory, DNS and DHCP | Planned |
+| 10 | Group Policy (GPO) | Planned |
+| 11 | Intune and Endpoint Management | Planned |
+| 12 | Backup and Recovery | Planned |
+| 13 | Conditional Access and MFA Design | Planned |
+| 14 | Azure Virtual Networks and NSGs | Planned |
+| 15 | Azure Monitor and Activity Log | Planned |
+
+Status is updated only when a lab has actually been performed and documented.
 
 ## Lab Progress
 
@@ -88,6 +111,7 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 **Security note:** No application settings, role assignments, or permissions were changed during these checks.
 
 **Next step:** Practise user and group management concepts in a safe lab environment and continue learning how Microsoft Entra ID supports identity and access management.
+
 ### Lab 05 — Microsoft Entra ID Users and Groups
 
 - **Status:** Completed
@@ -116,9 +140,8 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 
 ### Lab 06 — Troubleshoot a Microsoft Entra ID Sign-in Failure
 
-**Status:** Completed
-
-**Objective:** Investigate a failed user sign-in by reviewing account status, sign-in logs, authentication details, and Conditional Access results.
+- **Status:** Completed
+- **Objective:** Investigate a failed user sign-in by reviewing account status, sign-in logs, authentication details, and Conditional Access results.
 
 **Steps performed:**
 1. Checked the account status and confirmed the account was enabled.
@@ -152,31 +175,50 @@ My goal is to build practical skills relevant to IT Support, IT Infrastructure, 
 
 **Important note:** This lab documents read-only investigation. No account, authentication method, or security policy settings were changed.
 
-## Lab 07: Azure RBAC and Role Assignments (Read-Only)
+### Lab 07 — Azure RBAC and Role Assignments (Read-Only)
 
-### Objective
-Understand Azure Role-Based Access Control (RBAC), built-in roles, assignment scope, and the principle of least privilege.
+- **Status:** Completed
+- **Objective:** Understand Azure Role-Based Access Control (RBAC), built-in roles, assignment scope, and the principle of least privilege.
 
-### Activities Performed
+**Activities performed:**
 - Opened Azure subscription 1 and navigated to Access control (IAM).
 - Inspected the role assignments in read-only mode.
 - Observed an Owner role assignment associated with my account.
 - Inspected the assignment details, where the scope was displayed as "This resource".
 - Practised choosing appropriate roles for common IT support scenarios.
 
-### Key Learnings
+**Key learnings:**
 - **Reader:** Provides read-only access within the assigned scope.
 - **Contributor:** Can manage resources within the assigned scope but generally cannot grant access to other users.
 - **Owner:** Can manage resources and grant access within the assigned scope.
 - **Least privilege:** Access should be limited to what a user needs to perform their duties.
 - **Scope:** Determines the resources to which an assignment applies. The exact scope of the observed Owner assignment was not independently verified during this exercise.
 
-### Operational and Security Notes
+**Operational and security notes:**
 - Used read-only inspection; no role assignments or permissions were changed.
 - Verified that the role assignment displayed my account as the principal and Owner as the role.
 - Recognised the importance of checking scope before concluding how broadly a permission applies.
 
-### Outcome
-Improved my understanding of Azure RBAC, built-in role differences, assignment scope, and least-privilege access decisions.
+**Outcome:** Improved my understanding of Azure RBAC, built-in role differences, assignment scope, and least-privilege access decisions.
+
+### Lab 08 — Microsoft 365 Admin Basics
+
+- **Status:** Planned
+- **Objective:** Practise common user-management tasks in the Microsoft 365 admin center, as performed by an L1/L2 IT Support Engineer.
+
+**Planned tasks:**
+- Review the tenant and admin role in the Microsoft 365 admin center.
+- Create a test user and assign a licence.
+- Reset a password and review the sign-in block option.
+- Create a security group and a Microsoft 365 group, and compare them.
+- Create a shared mailbox and add a member.
+- Review Service health and Message center.
+- Delete the test user and review the Deleted users list.
+
+**Observations:** _To be completed after the lab._
+
+**Key learning:** _To be completed after the lab._
+
+**Security note:** _To be completed after the lab. Lab tenant only; no production settings changed._
 
 
